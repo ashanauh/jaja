@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('download.jfif'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .notebook {
+    position: relative;
+    width: 480px; /* Adjust notebook width as needed */
+    height: 640px; /* Adjust notebook height as needed */
+    background-color: #ffffff; /* White notebook cover */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f8b5c3; /* Light pink cover background */
+    padding: 20px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .ribbon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background-color: #ff69b4; /* Pink ribbon color */
+    border-radius: 10px;
+  }
+  
+  .inner {
+    position: relative;
+    width: calc(100% - 40px); /* Adjust to account for padding */
+    height: calc(100% - 40px); /* Adjust to account for padding */
+    background-color: #fff;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .page {
+    position: relative;
+    width: 100%;
+    min-height: 100%; /* Allow page to expand vertically */
+    background-color: #fefefe; /* Page background color */
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+  
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(transparent, transparent 14px, #eee 14px, #eee 16px); /* Lined paper effect */
+    pointer-events: none; /* Prevents text selection */
+  }
+  
+  .content {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    overflow: auto;
+    padding: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  
+  .letter {
+    display: none; /* Initially hide the letter */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff; /* White letter background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%; /* Limit letter width */
+    text-align: center;
+  }
+  

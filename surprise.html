@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <style>
+    /* Your existing CSS styles */
+    body {
+      background-color: rgb(248, 181, 195);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 20px 30px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #ff4f9d;
+    }
+
+    .button:active {
+      background-color: #ff4f9d;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    .container {
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      max-height: 80vh; /* Adjust as needed */
+      display: none; /* Initially hide the container */
+    }
+
+    .notebook {
+      position: relative;
+      background-color: pink; /* Pink background */
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="notebook">
+      <div class="cover">
+        <div class="ribbon"></div>
+        <div class="inner">
+          <div class="page">
+            <div class="lines"></div>
+            <div class="content" contenteditable="true">
+              Super dami ko gustong sabihin sa'yo pero limitado lang yung kayang ilabas ng bibig ko kasi nakakahiya na, sobrang nakakahiya kasi sa paulit-ulit nating pag-aaway, napakadami ko mga nasabi na hindi maganda sa'yo. Maraming salamat sa palaging pag-intindi at sa patuloy mong pagmamahal na araw-araw ko nararamdaman. Ayoko na mangako dahil ayoko na maramdaman mo na lahat hanggang pangako na lang, pero pipilitin ko itama lahat. Kasi love na love kita. Alam ko na may doubt sa'yo, sinasabi mo na may tiwala ka sa akin pero certain ako na may pagdududa ka. Wala akong iba, hindi ako humahanap at hindi ako hahanap ng iba. Andami mong ipinaramdam sa akin na akala ko hindi ko na mararanasan. Walang dahilan para humanap pa ng iba. Palagi mong iisipin na worth it ka, kasi yun yung totoo eh. Bibihira na lang yung gaya mo. Hindi ko alam kung anong nakita mo sa'kin pero pinapanalangin ko na hindi mawala sa'kin yun kasi gusto kitang makasama habang buhay. Mahal na mahal kita. Ikaw kakampi ko eh. Nakikita kita sa future ko kaya wag ka na mag-isip na ipagpapalit pa kita. Thank you sa lahat ng sacrifices at sa lahat ng happiness na idinulot mo sa life ko. I'm sorry sa lahat ng pain, sa mga luha mo na nasayang dahil sa akin. Akala ko hanggang panaginip na lang 'to eh, akala ko hanggang imagination na lang. Sa sarap ng love mo, feeling ko hindi ko na deserve. Pero super thankful ako kasi ngayon ko lang naramdaman sa isang lalaki yun eh. Oo, hindi perfect yung story natin, napakadaming flaws. Pero ganun naman talaga, diba? Bata pa tayo eh. Kaya dapat sabay tayo mag-grow. Gusto ko na sabay natin aabutin ang mga pangarap natin. Ititira natin lahat ng pets natin sa sarili nating bahay. Huhu, super sakit nito isipin kasi malaki yung chance na wala na sila pagdating ng panahon na yun. 🙁 Pero ayun na nga, namimiss lang kita kaya naisipan ko magsulat. Sana hindi na mag-overthink, wala naman kasi talaga e. Alam ko na mahirap yan, mahirap mag-isip ng kung ano-ano, at sorry dahil naiiparamdam ko sa'yo yun. Pero masakit din para sa'kin isipin na hindi buo yung tiwala mo sa'kin. Pero iggain ko yan!! Ang dami ko na gustong sabihin sayo pero sa ngayon, ang gusto ko lang malaman mo ay mahal na mahaaall kitaaa!!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<body>
+  <div class="container" id="videoContainer">
+    <div class="notebook">
+      <!-- Video iframe will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- Pink cute button at the center bottom -->
+  <div class="button-container">
+    <button onclick="showVideo()" class="button">This reminds me of u</button>
+  </div>
+
+  <!-- JavaScript to handle video display -->
+  <script>
+    function showVideo() {
+      // Get the container element
+      var container = document.getElementById('videoContainer');
+
+      // Create the iframe element for the video
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://drive.google.com/file/d/1SYiORDrYoEjVLfgXYFzMV7LAtsjKw6cC/view?usp=sharing'; // Replace with your Google Drive video link
+      iframe.width = '640';
+      iframe.height = '360';
+      iframe.frameBorder = '0';
+      iframe.allowFullscreen = true;
+
+      // Append the iframe to the container
+      container.innerHTML = ''; // Clear any previous content
+      container.appendChild(iframe);
+
+      // Show the container
+      container.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

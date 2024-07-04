@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hiiiiii</title>
+  <style>
+    body {
+      background-color: rgb(248, 181, 195);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    p {
+      text-align: center;
+      font-size: 32px;
+      font-family: Candara, Oswald;
+    }
+    img {
+      display: block;
+      margin: 20px auto; /* Added margin for spacing */
+      width: 25%;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; /* Adjust as needed */
+    }
+    button {
+      margin: 0 10px; /* Added margin between buttons */
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+    }
+    .button {
+      display: none; /* Initially hidden */
+      margin-top: 20px; /* Added margin for spacing */
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+      text-decoration: none; /* Remove underline */
+    }
+  </style>
+</head>
+<body>
+  <p>gala tayoooo?</p>
+  <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="Cat GIF" />
+
+  <div class="button-container">
+    <button id="botao1">YES BBY!</button>
+    <button id="botao2">YES NA YES</button>
+  </div>
+
+  <!-- Button for surprise, initially hidden -->
+  <a id="surprise-button" class="button" href="surprise.html">Click here for your surprise!</a>
+
+  <script>
+    // Function to show surprise button
+    function showSurprise() {
+      alert('Yeyyy thankuu!');
+      document.getElementById('surprise-button').style.display = 'block'; // Show surprise button
+    }
+
+    // Event listeners for both buttons to call the same function
+    document.getElementById('botao1').addEventListener('click', showSurprise);
+    document.getElementById('botao2').addEventListener('click', showSurprise);
+  </script>
+</body>
+</html>
